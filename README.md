@@ -35,6 +35,21 @@ cd tools/texvc
 make
 ```
 
+Note that for ubuntu 16 some packages are no longer required
+```
+sudo apt-get install build-essential dvipng ocaml \
+  ocaml-native-compilers texlive texlive-bibtex-extra \
+  texlive-font-utils texlive-fonts-extra \
+  texlive-lang-cyrillic texlive-lang-czechslovak \
+  texlive-lang-french \
+  texlive-lang-german texlive-lang-greek \
+  texlive-lang-italian \
+  texlive-lang-other texlive-lang-polish \
+  texlive-lang-portuguese texlive-lang-spanish \
+  texlive-latex-extra texlive-math-extra \
+  texlive-pictures texlive-pstricks texlive-publishers texlive-generic-extra
+```
+
 ### LaTeXML
 To use LaTeXML additional installation is required:
 ```bash
