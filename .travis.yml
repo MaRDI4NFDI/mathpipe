@@ -35,7 +35,6 @@ node_js:
 addons:
   firefox: "49.0"
 before_script:
-  - firefox --version
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
