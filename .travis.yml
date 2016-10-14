@@ -1,5 +1,6 @@
 sudo: false
 addons:
+  firefox: "49.0"
   apt:
     packages:
     #texvc dependencies
@@ -32,8 +33,6 @@ node_js:
   - "4.3.0"
   - "4"
   - "5.6"
-addons:
-  firefox: "49.0"
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
