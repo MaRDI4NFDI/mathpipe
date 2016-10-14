@@ -36,10 +36,10 @@
     "extend": "^3.0.0",
     "istanbul": "^0.4.3",
     "jshint": "^2.9.1",
-    "mocha": "^2.4.5",
+    "mocha": "^3.1.2",
     "mocha-jshint": "^2.3.1",
     "mocha-lcov-reporter": "^1.2.0",
-    "swagger-router": "^0.4.2"
+    "swagger-router": "^0.5.2"
   },
   "dependencies": {
     "bluebird": "^3.3.5",
@@ -54,10 +54,10 @@
     "js-yaml": "^3.6.0",
     "mkdirp-bluebird": "^1.0.1",
     "preq": "^0.4.9",
-    "request-promise": "^3.0.0",
-    "screenshot-promise": "^1.1.0",
-    "selenium-webdriver": "^2.53.2",
-    "service-runner": "^1.2.2"
+    "request-promise": "^4.1.1",
+    "screenshot-promise": "git+https://github.com/physikerwelt/screenshot-promise",
+    "selenium-webdriver": "^3.0.0-beta-3",
+    "service-runner": "^2.1.7"
   },
   "deploy": {
     "target": "debian",
