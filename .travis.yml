@@ -1,5 +1,6 @@
 sudo: false
 addons:
+  firefox: "49.0"
   apt:
     packages:
     #texvc dependencies
@@ -27,7 +28,6 @@ addons:
       - imagemagick
       - libimage-magick-perl
       - latexml
-      - firefox
 language: node_js
 node_js:
   - "4.3.0"
