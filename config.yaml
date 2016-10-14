@@ -74,6 +74,14 @@ latexml_path: ./tools/LaTeXML/bin/latexmlmath
 # 'http://localhost:7231/wikimedia.org/v1/media/math/'
 restbase_url: http://api.formulasearchengine.com/v1/media/math/
 
+# mathoid url
+# For a local installation the url would look like
+# 'http://localhost:10042/
+# Important: The last / must be present.
+mathoid_url: http://mathoid2.wmflabs.org/
+
+
+
 # Number of formulae that are processed togehter
 chunk_size: 200
 
