@@ -8,7 +8,7 @@ Processes tex to png images using different routes
 
 [![overview](doc/mathpipe.png)](http://physikerwelt.github.io/mathpipe/mathpipe.html)
 ## Prerequisites
-To run mathpipe you need to have npm and [nodejs](https://nodejs.org) installed. The version shiped together with ubuntu 16, was tested and worked well with mathpipe. You can install the required packages on ubutu 16 via
+To run mathpipe you need to have npm and [nodejs](https://nodejs.org) installed. The version shipped together with ubuntu 16, was tested and worked well with mathpipe. You can install the required packages on ubutu 16 via
 ```bash
 sudo apt-get install npm nodejs-legacy
 ```
