@@ -18,13 +18,13 @@ program
 program
     .command('convert <inputFile> [outputDir]')
     .action(function (inputFile,outputDir) {
-        mathpipe.processFile(inputFile, mathpipe.mainPipe, outputDir);//.then(console.log('done'));
+        mathpipe.processFile(inputFile, mathpipe.matgradePipe, outputDir);//.then(console.log('done'));
     });
 
 program
     .command('compare <inputFile> [uriA] [uriB] [outputDir]')
     .action( function(inputFile, uriA, uriB, outputDir){
-        var func = matgrade.mainPipe(uriA,uriB);
+        var func = matgrade.matgradePipe(uriA,uriB,program.verbose);
         mathpipe.processFile(inputFile,func,outputDir)
             .then(console.log('comparison completed'));
     } );
