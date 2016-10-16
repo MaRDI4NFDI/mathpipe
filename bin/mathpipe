@@ -3,6 +3,7 @@
 var program = require('commander');
 var json = require('../package.json');
 var mathpipe = require('../');
+var matgrade = require('../lib/matgrade');
 
 program
     .version(json.version)
@@ -19,4 +20,13 @@ program
     .action(function (inputFile,outputDir) {
         mathpipe.processFile(inputFile, mathpipe.mainPipe, outputDir);//.then(console.log('done'));
     });
+
+program
+    .command('compare <inputFile> [uriA] [uriB] [outputDir]')
+    .action( function(inputFile, uriA, uriB, outputDir){
+        var func = matgrade.mainPipe(uriA,uriB);
+        mathpipe.processFile(inputFile,func,outputDir)
+            .then(console.log('comparison completed'));
+    } );
+
 program.parse(process.argv);
