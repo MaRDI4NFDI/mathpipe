@@ -11,10 +11,8 @@ describe('mathoid', function () {
         it('vaild sample ' + JSON.stringify(tc.input), function () {
             this.timeout(5000);
             var getFoder = pipe.getFolder(tc.input, pipe.config.conf.out_dir);
-            return BB.map(mathoid.getOutputs(getFoder, pipe.config.conf.mathoid_url), function (format) {
-                return format[1].then(function (file) {
-                    assert.ok(file.indexOf(tc.inputhash) > 0);
-                });
+            return BB.map(mathoid.getOutputs(getFoder, pipe.config.conf.mathoid_url), function (file) {
+                assert.ok(file.indexOf(tc.inputhash) > 0);
             });
         });
     });
@@ -22,10 +20,8 @@ describe('mathoid', function () {
         it('invalid sample ' + JSON.stringify(tc.input), function () {
             this.timeout(5000);
             var getFoder = pipe.getFolder(tc.input, pipe.config.conf.out_dir);
-            return BB.map(mathoid.getOutputs(getFoder, pipe.config.conf.mathoid_url), function (format) {
-                return format[1].then(function (file) {
+            return BB.map(mathoid.getOutputs(getFoder, pipe.config.conf.mathoid_url), function (file) {
                     assert.ok(file.indexOf(tc.inputhash) > 0);
-                });
             }).catch(function (e) {
                 assert.equal(e.name, 'StatusCodeError');
             });
