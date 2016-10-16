@@ -58,8 +58,7 @@
     "request-promise": "^4.1.1",
     "screenshot-promise": "git+https://github.com/physikerwelt/screenshot-promise",
     "selenium-webdriver": "^3.0.0-beta-3",
-    "service-runner": "^2.1.7",
-    "urlencode": "^1.1.0"
+    "service-runner": "^2.1.7"
   },
   "deploy": {
     "target": "debian",
