@@ -30,9 +30,9 @@ var clone = function (branch, folder) {
                 folder])
         })
         .then(function () {
-            console.log("Installing mathoid " + folder);
+            console.log("Skip Installing mathoid " + folder);
             var npm = (process.platform === "win32" ? "npm.cmd" : "npm");
-            return spawn(npm, ['i'], {cwd: folder});
+            // return spawn(npm, ['i'], {cwd: folder});
         });
 };
 
