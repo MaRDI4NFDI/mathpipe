@@ -6,7 +6,7 @@ IP 192.168.0.3, (runs mathpipe)
 * [worker-1 (w1)](https://bwcloud.ruf.uni-freiburg.de/dashboard/project/instances/eec808f5-2603-4d1a-8bb6-4fb82ceb96ef/)
 IP 192.168.0.5, (runs master branch of mathoid)
 * [worker-2 (w2)](https://bwcloud.ruf.uni-freiburg.de/dashboard/project/instances/447dfc68-2210-42ad-86d9-8abe00ebe15c/)
-IP 192.168.0.4, (runs master branch of mathoid v0.6.2)
+IP 192.168.0.4, (runs master branch of mathoid v0.6.4)
 
 and one [virtual network](https://bwcloud.ruf.uni-freiburg.de/dashboard/project/networks/2de311c0-0cec-4733-a022-d166eb175dfd/detail)
 in the IP range 192.168.0.0/24.
