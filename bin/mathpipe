@@ -11,22 +11,24 @@ program
 
 program
     .command('hash [tex...]')
-    .action( function(tex){
+    .action(function (tex) {
         console.log(mathpipe.getHash(tex.join(' ')));
-    } );
+    });
 
 program
     .command('convert <inputFile> [outputDir]')
-    .action(function (inputFile,outputDir) {
+    .action(function (inputFile, outputDir) {
         mathpipe.processFile(inputFile, mathpipe.mainPipe, outputDir);//.then(console.log('done'));
     });
 
 program
     .command('compare <inputFile> [uriA] [uriB] [outputDir]')
-    .action( function(inputFile, uriA, uriB, outputDir){
-        var func = matgrade.matgradePipe(uriA,uriB,program.verbose);
-        mathpipe.processFile(inputFile,func,outputDir)
-            .then(console.log('comparison completed'));
-    } );
+    .action(function (inputFile, uriA, uriB, outputDir) {
+        var func = matgrade.matgradePipe(uriA, uriB, program.verbose);
+        return mathpipe.processFileSimple(inputFile, func, outputDir)
+            .then(function () {
+                console.log('comparison completed')
+            });
+    });
 
 program.parse(process.argv);
