@@ -22,7 +22,7 @@ var clone = function (branch, folder) {
             console.log("Cloning mathoid " + folder);
             return spawn('git', [
                 'clone',
-                'https://github.com/wikimedia/mathoid',
+                'https://github.com/physikerwelt/mathoid-server',
                 '--depth=1',
                 '--single-branch',
                 '--branch',
@@ -38,7 +38,7 @@ var clone = function (branch, folder) {
 
 describe('matgrade', function () {
     before(function () {
-        return BB.join(clone('master'), clone('0.6.2'));
+        return BB.join(clone('master'), clone('cli'));
         //TODO: Configure mathoid instances
     });
     it('should process a simple file', function () {
