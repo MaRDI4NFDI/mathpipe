@@ -18,7 +18,7 @@ program
 program
     .command('convert <inputFile> [outputDir]')
     .action(function (inputFile,outputDir) {
-        mathpipe.processFile(inputFile, mathpipe.matgradePipe, outputDir);//.then(console.log('done'));
+        mathpipe.processFile(inputFile, mathpipe.mainPipe, outputDir);//.then(console.log('done'));
     });
 
 program
