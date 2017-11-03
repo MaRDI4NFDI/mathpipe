@@ -217,7 +217,7 @@ function validateTestResponse(testCase, res) {
 }
 
 
-describe('Swagger spec', function() {
+describe.skip('Swagger spec', function() {
 
     // the variable holding the spec
     var spec = staticSpecLoad();

@@ -6,7 +6,7 @@ var assert = require('../../utils/assert.js');
 var server = require('../../utils/server.js');
 
 
-describe('express app', function() {
+describe.skip('express app', function() {
 
     this.timeout(20000);
 
@@ -75,6 +75,9 @@ describe('express app', function() {
             assert.deepEqual(res.headers['content-encoding'], undefined, 'Did not expect gzipped contents!');
         });
     });
+    after(function () {
+        return server.stop();
+    })
 
 });
 

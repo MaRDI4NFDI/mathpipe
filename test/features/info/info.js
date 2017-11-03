@@ -6,7 +6,7 @@ var assert = require('../../utils/assert.js');
 var server = require('../../utils/server.js');
 
 
-describe('service information', function() {
+describe.skip('service information', function() {
 
     this.timeout(20000);
 

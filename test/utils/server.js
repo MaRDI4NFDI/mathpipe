@@ -66,7 +66,11 @@ function start(_options) {
     }
 
 }
-
+function stopServer()  {
+    console.log("stopping server");
+    return runner.stop();
+}
 module.exports.config = config;
 module.exports.start  = start;
+module.exports.stop = stopServer;
 
