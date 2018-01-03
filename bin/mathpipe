@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 
+'use strict';
+
 var program = require('commander');
 var json = require('../package.json');
 var mathpipe = require('../');
 var matgrade = require('../lib/matgrade');
+const BB = require('bluebird');
+const fs = BB.promisifyAll(require('fs'));
+const yaml = require('js-yaml');
 
 program
     .version(json.version)
@@ -24,11 +29,28 @@ program
 program
     .command('compare <inputFile> [uriA] [uriB] [outputDir]')
     .action(function (inputFile, uriA, uriB, outputDir) {
-        var func = matgrade.matgradePipe(uriA, uriB, program.verbose);
-        return mathpipe.processFileSimple(inputFile, func, outputDir)
+      const func = matgrade.matgradePipe(uriA, uriB, program.verbose)
+      return mathpipe.processFileSimple(inputFile, func, outputDir)
             .then(function () {
                 console.log('comparison completed')
             });
     });
+
+program
+  .command('yaml2json [inputFile] [outputFile]')
+  .action(function (inFile,outFile) {
+    const formulae = yaml.safeLoad(fs.readFileSync(inFile));
+    const output = [];
+    Object.keys(formulae).forEach((hash) => {
+      const testcase = formulae[hash];
+      output.push({
+        'inputhash': hash,
+        'input': testcase.formula,
+        'type': testcase.type
+      });
+    });
+
+    fs.writeFileAsync(outFile, JSON.stringify(output, null, 2));
+  });
 
 program.parse(process.argv);
