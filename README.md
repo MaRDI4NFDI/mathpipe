@@ -1,7 +1,6 @@
 # mathpipe
 [![Build Status](https://travis-ci.org/physikerwelt/mathpipe.svg?branch=master)](https://travis-ci.org/physikerwelt/mathpipe)
-[![Coverage Status](https://coveralls.io/repos/github/physikerwelt/mathpipe/badge.svg?branch=master)](https://coveralls.io/github/physikerwelt/mathpipe?branch=master)
-[![bitHound Overall Score](https://www.bithound.io/github/physikerwelt/mathpipe/badges/score.svg)](https://www.bithound.io/github/physikerwelt/mathpipe)
+[![Coverage Status](https://coveralls.io/repos/github/MaRDI4NFDI/mathpipe/badge.svg?branch=master)](https://coveralls.io/github/MaRDI4NFDI/mathpipe?branch=master)
 [![Code Climate](https://codeclimate.com/github/physikerwelt/mathpipe/badges/gpa.svg)](https://codeclimate.com/github/physikerwelt/mathpipe)
 
 Processes tex to png images using different routes
