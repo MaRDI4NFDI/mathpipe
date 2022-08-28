@@ -1,5 +1,5 @@
 # mathpipe
-[![Build Status](https://travis-ci.org/physikerwelt/mathpipe.svg?branch=master)](https://travis-ci.org/physikerwelt/mathpipe)
+[![Test Coveralls](https://github.com/MaRDI4NFDI/mathpipe/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/MaRDI4NFDI/mathpipe/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/MaRDI4NFDI/mathpipe/badge.svg?branch=master)](https://coveralls.io/github/MaRDI4NFDI/mathpipe?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3c550c52c07bd29adb11/maintainability)](https://codeclimate.com/github/MaRDI4NFDI/mathpipe/maintainability)
 Processes tex to png images using different routes
