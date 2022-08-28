@@ -6,7 +6,7 @@ var pipe = require('../..');
 
 describe('screenshot', function () {
     testcases.slice(0,2).forEach(function (tc) {
-        it('should take screenshot of svg from ' + JSON.stringify(tc.input), function () {
+        it.skip('should take screenshot of svg from ' + JSON.stringify(tc.input), function () {
             this.timeout(50000);
             var folder = pipe.getFolder(tc.input, pipe.config.conf.out_dir);
             var getCheck = restbase.check(tc.input, pipe.config.conf.restbase_url);

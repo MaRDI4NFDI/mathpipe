@@ -72,13 +72,13 @@ latexml_path: ./tools/LaTeXML/bin/latexmlmath
 # Restbase url
 # For a local installation the url would look like
 # 'http://localhost:7231/wikimedia.org/v1/media/math/'
-restbase_url: http://api.formulasearchengine.com/v1/media/math/
+restbase_url: https://en.wikipedia.org/api/rest_v1/media/math/
 
 # mathoid url
 # For a local installation the url would look like
 # 'http://localhost:10042/
 # Important: The last / must be present.
-mathoid_url: http://mathoid.formulasearchengine.com/
+mathoid_url: https://mathoid2.wmflabs.org/
 
 
 
